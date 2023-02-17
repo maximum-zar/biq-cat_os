@@ -2,4 +2,4 @@ node_modules/
 dist/
 .vscode/
 app/css/
-app/js
+app/js/built

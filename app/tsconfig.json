@@ -2,7 +2,7 @@
   "compilerOptions": {
     "target": "ES6",
     "module": "UMD",
-    "outDir": "./js",
+    "outDir": "./js/dist",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
 

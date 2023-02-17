@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "@types/express": "^4.17.17",
+    "@types/jquery": "^3.5.16",
     "@types/node": "^18.13.0",
     "concurrently": "^7.6.0",
     "nodemon": "^2.0.20",
