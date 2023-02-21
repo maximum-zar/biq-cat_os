@@ -1,0 +1,24 @@
+$accent: #d14040;
+
+.release {
+    color: $accent !important;
+}
+
+#warnings > div {
+    text-align: center;
+    position: absolute;
+    overflow: auto;
+    color: white;
+    background-color: #a88e16;
+    border: .5px solid silver;
+    border-radius: 10px;
+    width: 100%;
+
+    .close {
+        float: right;
+        font-size: 2em;
+        &:hover {
+            color: $accent;
+        }
+    }
+}
