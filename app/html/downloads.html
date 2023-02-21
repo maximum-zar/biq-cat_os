@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Downloads</title>
+        <link rel="stylesheet" href="/css/index.css" />
+        <link rel="stylesheet" href="/css/downloads.css">
+    </head>
+    <body>
+        <div id="warnings">
+            <div>
+            ISO is not ready right now. <br />You can download the Arch ISO and
+            install utilities using <a href="#">this manual</a>
+            <div class="close">X</div>
+            </div>
+        </div>
+        <div class="banner">
+            <h1>Stable release: <span class="release" data-branch="stable">unknown</span></h1>
+            <button class="download">Download ISO</button>
+            <button class="download">BitTorrent</button>
+        </div>
+        <script>
+            let warnings = document.getElementById("warnings").children
+            for (let i = 0; i < warnings.length; i++) {
+                warnings[i].getElementsByClassName("close")[0].addEventListener("click", (e) => {
+                    e.target.parentNode.remove()
+                })
+            }
+        </script>
+    </body>
+</html>
