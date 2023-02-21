@@ -11,52 +11,73 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/css/index.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/icons.css" />
+    <link rel="stylesheet" href="/css/main.css" />
   </head>
   <body>
     <!-- <script src="/js/dist/index.js"></script> -->
-    <div class="banner">
-      <h1>BIQ-Cat OS - the OS of the future</h1>
-      <button class="download">Download now</button>
+    <nav>
+      <h1>BIQ-Cat OS</h1>
+      <div>
+        <ul>
+          <li>Index</li>
+          <li>About</li>
+          <li>Downloads</li>
+          <li>Get Involved</li>
+        </ul>
+        <span class="material-icons"> account_circle </span>
+      </div>
+    </nav>
+    <div id="root">
+      <div class="banner">
+        <h1>BIQ-Cat OS - OS of the future</h1>
+        <button class="download">Download now</button>
+      </div>
+      <h1>Featurs</h1>
+      <section class="features">
+        <article>
+          <img src="/img/ai.png" alt="AI" />
+          <div>
+            <h2>AI</h2>
+            <p>
+              BIQ-Cat OS uses AI to predict your choices, as powerful helper,
+              etc. If you don't want some features, you may just switch them off
+            </p>
+          </div>
+        </article>
+        <article>
+          <img src="/img/settings.png" alt="Features" />
+          <div>
+            <h2>All new features from Windows & Linux</h2>
+            <p>
+              Have you got a file system with real-time compression or built-in
+              vitual machene? BIQ-Cat OS have both of them! We've included the
+              best features from Windows (like WSA) and Linux (like Flatpak,
+              BTRFS)
+            </p>
+          </div>
+        </article>
+        <article>
+          <img src="/img/productivity.png" alt="Productivity" />
+          <div>
+            <h2>Applications compatibility</h2>
+            <p>
+              All you Android, IOS and Windows applications will work natively
+              on BIQ-Cat OS! Now you can play your favourite computure games on
+              PC without any emulators!
+            </p>
+          </div>
+        </article>
+      </section>
+      <section class="download">
+        <button class="download">Download for free</button>
+      </section>
     </div>
-    <h1>Featurs</h1>
-    <section class="features">
-      <article>
-        <img src="/img/ai.png" alt="AI" />
-        <div>
-          <h2>AI</h2>
-          <p>
-            BIQ-Cat OS uses AI to predict your choices, as powerful helper, etc.
-            If you don't want some features, you may just switch them off
-          </p>
-        </div>
-      </article>
-      <article>
-        <img src="/img/settings.png" alt="Features" />
-        <div>
-          <h2>All new features from Windows & Linux</h2>
-          <p>
-            Have you got a file system with real-time compression or built-in
-            vitual machene? BIQ-Cat OS have both of them! We've included the
-            best features from Windows (like WSA) and Linux (like Flatpak,
-            BTRFS)
-          </p>
-        </div>
-      </article>
-      <article>
-        <img src="/img/productivity.png" alt="Productivity" />
-        <div>
-          <h2>Applications compatibility</h2>
-          <p>
-            All you Android, IOS and Windows applications will work natively on
-            BIQ-Cat OS! Now you can play your favourite computure games on PC
-            without any emulators!
-          </p>
-        </div>
-      </article>
-    </section>
-    <footer>&copy;2023. All rights reserved.</footer>
-    <script src="/js/jquery.min.js"></script>
-    <!-- <script src="/js/dist/animation.js"></script> -->
+    <footer>&copy; BIQ-Cat, 2023. All rights reserved.</footer>
+    <script src="/js/index.js" type="module"></script>
   </body>
 </html>

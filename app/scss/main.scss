@@ -21,16 +21,24 @@ body {
   text-transform: uppercase;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
+  button {
+    padding: 20px !important;
+  }
+
+  @media screen and (max-width: 680px) {
+    background-image: url("/img/banner-mobile.svg");
+  }
   h1 {
     font-weight: 500;
     font-size: 2em;
+    background-color: rgba($color: $primary, $alpha: 0.5);
   }
 }
 h1 {
@@ -39,19 +47,24 @@ h1 {
 
 button.download {
   display: block;
-  width: 20%;
-  height: 10%;
   text-transform: inherit;
   border: none;
   margin: 0 auto;
   font-size: medium;
-  font-weight: 500;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+  padding: 10px;
   background-color: $accent;
-  color: #353537;
+  color: white;
   &:hover {
     transform: scale(1.1);
     transition: ease 1s;
   }
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
 }
 
 section.features {
@@ -78,7 +91,7 @@ section.features {
         width: 256px;
         height: 256px;
       }
-      @media screen and (min-width : 320px) and (max-width : 480px) {
+      @media screen and (max-width: 680px) {
         width: 64px;
         height: 64px;
       }
@@ -88,5 +101,50 @@ section.features {
 
 section.download {
   background-color: $primary;
-  padding: 5%;
+  padding: 10px 0;
+}
+
+nav,
+footer {
+  background-color: white;
+}
+
+nav {
+  overflow: auto;
+  * {
+    display: inline-block;
+    text-align: center;
+  }
+  h1 {
+    font-weight: bold;
+    float: left;
+  }
+  div {
+    float: right;
+    ul {
+      list-style-type: none;
+      text-align: center;
+    }
+    li {
+      margin: 5px;
+    }
+    .material-icons {
+      float: right;
+      font-size: 48px;
+      margin: 0 auto;
+    }
+  }
+}
+
+// JS-specific classes
+.show-onscroll {
+  position: relative;
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 2s all ease;
+}
+
+.show-onscroll.active {
+  transform: translateY(0);
+  opacity: 1;
 }
