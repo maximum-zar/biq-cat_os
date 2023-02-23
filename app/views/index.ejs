@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <%- include("partials/header.ejs") %>
+    </head>
+    <body>
+        <!-- <script src="/js/dist/index.js"></script> -->
+        <nav>
+            <h1>BIQ-Cat OS</h1>
+            <div>
+                <ul>
+                    <li>Index</li>
+                    <li>About</li>
+                    <li>Downloads</li>
+                    <li>Get Involved</li>
+                </ul>
+                <span class="material-icons"> account_circle </span>
+            </div>
+        </nav>
+        <div id="root"><%- content %></div>
+        <footer>&copy; BIQ-Cat, 2023. All rights reserved.</footer>
+        <script src="/js/index.js" type="module"></script>
+    </body>
+</html>
