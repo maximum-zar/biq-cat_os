@@ -1,0 +1,53 @@
+@import "variables";
+html,
+body {
+    background-color: $primary;
+    color: white;
+    width: 100%;
+    height: 100%;
+    * {
+        font-size: 1.1em;
+    }
+}
+footer {
+    background-color: #111111;
+}
+fieldset {
+    border-radius: 10px;
+    border-style: dashed;
+    border-width: 2px;
+    border-color: gray;
+    margin-bottom: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    margin: 5px 0;
+    legend {
+        text-align: center;
+        background-color: #222222;
+        padding: 10px;
+        border-radius: 5px;
+    }
+}
+
+input {
+    display: block;
+    width: 50%;
+    background-color: black;
+    border: 1px solid #25003a;
+    border-radius: 5px;
+    padding: 5px 0;
+    padding-left: 5px;
+    color: white;
+}
+input[type="submit"] {
+    width: fit-content;
+    padding: 10px 30px;
+    margin: 0 auto;
+}
+::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+}

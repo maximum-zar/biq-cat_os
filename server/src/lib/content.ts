@@ -9,9 +9,9 @@ export function readContent(name: string) {
             "..",
             "..",
             "app",
-            "data",
+            "views",
             "pages",
             name + ".html"
         )
-    );
+    ).toString("utf-8");
 }

@@ -1,7 +1,7 @@
 import express, { Request, Response } from "express";
 import { join } from "path";
-import index from "./routes/index";
-
+import index from "./routes/gui";
+import browserSync from "browser-sync";
 const app = express();
 
 if (process.env.NODE_ENV !== "production") {
@@ -19,7 +19,7 @@ app.set("view engine", "ejs");
 app.use("/css", express.static(join(staticDir, "css")));
 app.use("/js", express.static(join(staticDir, "js")));
 app.use("/img", express.static(join(staticDir, "images")));
-app.use("/data", express.static(join(__dirname, "..", "..", "data")));
+app.use("/data/pages", express.static(join(viewsDir, "pages")));
 
 app.use("/", index);
 

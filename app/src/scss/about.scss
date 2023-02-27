@@ -1,0 +1,66 @@
+@import "variables";
+@import "animation";
+.about {
+    background-color: #6f9fec;
+    width: 90%;
+    padding-left: 10px;
+    padding-top: 5px;
+    overflow: hidden;
+    animation-name: slideIn;
+    animation-duration: 5s;
+    animation-timing-function: cubic-bezier(1, -0.03, 0.37, 1.63);
+    animation-iteration-count: 1;
+}
+
+#root ul {
+    list-style-type: none;
+    display: grid;
+
+    > * {
+        width: fit-content;
+        border-radius: 10px;
+        padding: 15px;
+        margin: 5px;
+        font-weight: bolder;
+        font-size: 1.5em;
+    }
+    .icons {
+        grid-column: 2;
+        background-color: #072238;
+        color: white;
+        a {
+            color: #4ee787;
+            text-decoration: none;
+            &:visited {
+                color: #4ee787;
+            }
+        }
+    }
+
+    .github {
+        grid-column: 2;
+        background-color: #211f1f;
+        color: white;
+        img {
+            height: 1.5em;
+            width: 1.5em;
+        }
+    }
+    .google {
+        grid-column: 1;
+        grid-row: 1;
+        color: #4285f4;
+        border-width: 2px;
+        border-style: solid;
+        border-color: black;
+        svg {
+            color: red;
+        }
+        i {
+            font: inherit;
+            display: inline;
+            margin: 0;
+            padding: 0;
+        }
+    }
+}

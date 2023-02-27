@@ -1,150 +1,135 @@
-$background: #dadada;
-$primary: #353535;
-$accent: #d14040;
-
+@import "variables";
 html,
 body {
-  margin: 0px;
-  height: 100%;
-  width: 100%;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1em;
-  background-color: $background;
+    margin: 0px;
+    height: 100%;
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1em;
+    background-color: $background;
 }
 .banner {
-  background-image: url("/img/banner.svg");
-  background-size: 100%;
-  background-repeat: no-repeat;
-  position: static;
-  color: white;
-  background-color: $primary;
-  text-transform: uppercase;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+    background-image: url("/img/banner.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: static;
+    color: white;
+    background-color: $primary;
+    text-transform: uppercase;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 
-  button {
-    padding: 20px !important;
-  }
+    button {
+        padding: 20px !important;
+    }
 
-  @media screen and (max-width: 680px) {
-    background-image: url("/img/banner-mobile.svg");
-  }
-  h1 {
-    font-weight: 500;
-    font-size: 2em;
-    background-color: rgba($color: $primary, $alpha: 0.5);
-  }
+    @media screen and (max-width: 680px) {
+        background-image: url("/img/banner-mobile.svg");
+    }
+    h1 {
+        font-weight: 500;
+        font-size: 2em;
+        background-color: rgba($color: $primary, $alpha: 0.5);
+    }
 }
 h1 {
-  text-align: center;
+    text-align: center;
+}
+
+a:has(button.download) {
+    text-decoration: none;
 }
 
 button.download {
-  display: block;
-  text-transform: inherit;
-  border: none;
-  margin: 0 auto;
-  font-size: medium;
-  font-weight: bold;
-  letter-spacing: 0.1em;
-  padding: 10px;
-  background-color: $accent;
-  color: white;
-  &:hover {
-    transform: scale(1.1);
-    transition: ease 1s;
-  }
+    display: block;
+    text-transform: inherit;
+    border: none;
+    margin: 0 auto;
+    font-size: medium;
+    font-weight: bold;
+    letter-spacing: 0.1em;
+    padding: 10px;
+    background-color: $accent;
+    color: white;
+    &:hover {
+        transform: scale(1.1);
+        transition: ease 1s;
+    }
 }
 
 footer {
-  text-align: center;
-  padding: 10px;
-}
-
-section.features {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  > article {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    max-height: 30%;
-    margin: 5% auto;
-    div {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-    img {
-      margin-right: 5%;
-      width: 128px;
-      height: 128px;
-      @media screen and (min-width: 1224px) {
-        width: 256px;
-        height: 256px;
-      }
-      @media screen and (max-width: 680px) {
-        width: 64px;
-        height: 64px;
-      }
-    }
-  }
-}
-
-section.download {
-  background-color: $primary;
-  padding: 10px 0;
+    text-align: center;
+    padding: 10px;
 }
 
 nav,
 footer {
-  background-color: white;
+    background-color: white;
 }
 
 nav {
-  overflow: auto;
-  * {
-    display: inline-block;
+    overflow: auto;
+    * {
+        display: inline-block;
+        text-align: center;
+    }
+    h1 {
+        font-weight: bold;
+        float: left;
+    }
+    div {
+        float: right;
+        ul {
+            list-style-type: none;
+            text-align: center;
+        }
+        li {
+            margin: 5px;
+        }
+        .material-icons {
+            float: right;
+            font-size: 48px;
+            margin: 0 auto;
+        }
+    }
+    a {
+        text-decoration: none;
+        color: inherit;
+        &:hover,
+        &.active {
+            color: $accent;
+        }
+    }
+}
+
+#warnings > div {
     text-align: center;
-  }
-  h1 {
-    font-weight: bold;
-    float: left;
-  }
-  div {
-    float: right;
-    ul {
-      list-style-type: none;
-      text-align: center;
-    }
-    li {
-      margin: 5px;
-    }
-    .material-icons {
-      float: right;
-      font-size: 48px;
-      margin: 0 auto;
-    }
-  }
-}
+    position: absolute;
+    overflow: auto;
+    color: white;
+    background-color: #a88e16;
+    border: 0.5px solid silver;
+    border-radius: 10px;
+    width: 100%;
 
-// JS-specific classes
-.show-onscroll {
-  position: relative;
-  transform: translateY(150px);
-  opacity: 0;
-  transition: 2s all ease;
-}
+    transition: all 2s ease;
 
-.show-onscroll.active {
-  transform: translateY(0);
-  opacity: 1;
+    a,
+    a:visited {
+        color: blue;
+    }
+
+    .close {
+        float: right;
+        font-size: 2em;
+        &:hover {
+            color: $accent;
+        }
+    }
 }

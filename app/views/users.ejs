@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <%- include("partials/header.ejs", {css}) %>
+        <%- include('partials/header.ejs', {css}) %>
     </head>
     <body>
-        <%- include('partials/nav.ejs'), {links} %>
         <div id="root"><%- content %></div>
         <%- include('partials/footer.ejs', {js}) %>
     </body>
