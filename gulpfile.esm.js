@@ -111,7 +111,7 @@ task("build", (callback) => {
     let js = () => typescript().pipe(babel()).pipe(dest("./app/dist/babel"));
     let css = () => scss().pipe(dest("./app/dist/css"));
     let bundlers = scripts.map((file) => () => bundle(file));
-    series(parallel(js, css, server), ...bundlers)(callback);
+    series(parallel(js, css, server, images), ...bundlers)(callback);
 });
 
 task("build-dev", (callback) => {

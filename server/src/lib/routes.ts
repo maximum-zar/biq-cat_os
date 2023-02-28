@@ -67,6 +67,7 @@ let routes: Route[] = [
         active: false,
         assets: {
             css: ["/css/forms.css"],
+            js: ["/js/validation.js"]
         },
     },
 ];

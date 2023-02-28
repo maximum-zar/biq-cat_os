@@ -20,7 +20,8 @@
         "start": "node .",
         "dev": "gulp clean && gulp dev",
         "build": "gulp clean && gulp build",
-        "clean": "gulp clean"
+        "clean": "gulp clean",
+        "postinstall": "npm run build"
     },
     "devDependencies": {
         "@babel/core": "^7.21.0",
