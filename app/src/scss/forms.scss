@@ -1,4 +1,4 @@
-@import "variables";
+@import 'variables';
 html,
 body {
     background-color: $primary;
@@ -43,7 +43,7 @@ input {
     padding-left: 5px;
     color: white;
 }
-input[type="submit"] {
+input[type='submit'] {
     width: fit-content;
     padding: 10px 30px;
     margin: 0 auto;

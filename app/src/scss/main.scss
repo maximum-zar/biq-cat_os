@@ -1,15 +1,15 @@
-@import "variables";
+@import 'variables';
 html,
 body {
     margin: 0px;
     height: 100%;
     width: 100%;
-    font-family: "Montserrat", sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-size: 1em;
     background-color: $background;
 }
 .banner {
-    background-image: url("/img/banner.svg");
+    background-image: url('/img/banner.svg');
     background-size: 100%;
     background-repeat: no-repeat;
     position: static;
@@ -30,7 +30,7 @@ body {
     }
 
     @media screen and (max-width: 680px) {
-        background-image: url("/img/banner-mobile.svg");
+        background-image: url('/img/banner-mobile.svg');
     }
     h1 {
         font-weight: 500;

@@ -2,13 +2,7 @@
     <fieldset>
         <legend>About yourself</legend>
         <label for="name">Enter your name: </label
-        ><input
-            type="text"
-            id="name"
-            name="name"
-            required
-            placeholder="John Doe"
-        /><br />
+        ><input type="text" id="name" name="name" required placeholder="John Doe" /><br />
         <label for="birthday">Enter your birthday date: </label
         ><input type="date" name="birthday" id="birthday" required />
     </fieldset>
@@ -22,38 +16,17 @@
             placeholder="john_doe"
             required
             minlength="5"
-            maxlength="15"
-        /><br />
+            maxlength="15" /><br />
         <label for="password">Password: </label
-        ><input
-            type="password"
-            name="password"
-            id="password"
-            minlength="8"
-            maxlength="25"
-            required
-        />
-        <label for="confirm">Confirm password:</label
-        ><input
-            type="password"
-            name="confirm-password"
-            id="confirm-password"
-            minlength="8"
-            maxlength="25"
-            required
-        />
+        ><input type="password" name="password" id="password" minlength="8" maxlength="25" required />
+        <label for="confirm-password">Confirm password:</label
+        ><input type="password" name="confirm-password" id="confirm-password" minlength="8" maxlength="25" required />
     </fieldset>
     <fieldset>
         <legend>Contact details (optional)</legend>
         <label for="email">Enter email: </label
-        ><input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="john.doe@example.com"
-        />
-        <label for="phone">Enter phone: </label
-        ><input type="tel" name="phone" id="phone" />
+        ><input type="email" name="email" id="email" placeholder="john.doe@example.com" />
+        <label for="phone">Enter phone: </label><input type="tel" name="phone" id="phone" />
     </fieldset>
     <input type="submit" name="register" value="Register" />
 </form>
