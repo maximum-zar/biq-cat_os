@@ -1,6 +1,6 @@
 import { Response, Router } from 'express';
-import { readContent } from '../lib/content';
-import routes, { Route } from '../lib/routes';
+import { readContent } from './lib/content';
+import routes, { Route } from './lib/routes';
 
 const router = Router();
 
