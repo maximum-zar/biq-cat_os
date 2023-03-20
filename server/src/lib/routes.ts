@@ -7,7 +7,7 @@ export interface Route {
     active: boolean;
     show: boolean;
     assets?: Assets;
-    data?: Object;
+    user: boolean;
 }
 
 export interface Assets {
@@ -23,6 +23,7 @@ let routes: Route[] = [
         active: false,
         template: 'index',
         contentName: 'index',
+        user: false,
         show: true,
         assets: {
             js: ['/js/index.js'],
@@ -35,6 +36,7 @@ let routes: Route[] = [
         active: false,
         template: 'index',
         contentName: 'about',
+        user: false,
         show: true,
         assets: {
             css: ['/css/about.css'],
@@ -47,16 +49,19 @@ let routes: Route[] = [
         template: 'index',
         contentName: 'downloads',
         show: true,
+        user: false,
         assets: {
             css: ['/css/downloads.css'],
         },
     },
-    { name: 'Get Involved', path: '/getinvolved', show: false, active: false },
+    { name: 'Get Involved', path: '/getinvolved', user: false, show: false, active: false },
     {
         name: 'Dashboard',
         path: '/users',
-        redirect: '/users/singup',
+        template: 'index',
+        contentName: 'dashboard',
         show: false,
+        user: true,
         active: false,
     },
     {
@@ -65,6 +70,7 @@ let routes: Route[] = [
         template: 'users',
         contentName: 'singup',
         show: false,
+        user: false,
         active: false,
         assets: {
             css: ['/css/forms.css'],
@@ -77,6 +83,7 @@ let routes: Route[] = [
         template: 'users',
         contentName: 'login',
         show: false,
+        user: false,
         active: false,
         assets: {
             css: ['/css/forms.css'],

@@ -50,7 +50,7 @@ actions.post('/login', urlencoded({ extended: true }), (req, res) =>
     selfRequesting(req, res, port, 'api/users/login', (response) => {
         const session: typeof req.session & { jwt?: string } = req.session;
         session.jwt = response.data.jwt;
-        res.redirect('/actions/dashboard');
+        res.redirect('/users');
     }),
 );
 actions.get('/dashboard', (req, res) => {
