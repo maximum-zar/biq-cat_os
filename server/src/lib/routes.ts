@@ -7,6 +7,7 @@ export interface Route {
     active: boolean;
     show: boolean;
     assets?: Assets;
+    data?: Object;
 }
 
 export interface Assets {
@@ -63,6 +64,18 @@ let routes: Route[] = [
         path: '/users/singup',
         template: 'users',
         contentName: 'singup',
+        show: false,
+        active: false,
+        assets: {
+            css: ['/css/forms.css'],
+            js: ['/js/validation.js'],
+        },
+    },
+    {
+        name: 'Log in',
+        path: '/users/login',
+        template: 'users',
+        contentName: 'login',
         show: false,
         active: false,
         assets: {
